@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.x_textbox = new System.Windows.Forms.TextBox();
             this.x_label = new System.Windows.Forms.Label();
             this.y_textbox = new System.Windows.Forms.TextBox();
             this.y_label = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // x_textbox
@@ -71,6 +73,12 @@
             this.y_label.TabIndex = 1;
             this.y_label.Text = "Y";
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,6 +103,7 @@
         private System.Windows.Forms.Label x_label;
         private System.Windows.Forms.TextBox y_textbox;
         private System.Windows.Forms.Label y_label;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
